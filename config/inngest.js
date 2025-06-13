@@ -6,7 +6,7 @@ import User from "@/models/User";
 export const inngest = new Inngest({ id: "verdeagua-personalizados" });
 
 // Inngest Function to save user data to a database
-export const syncUserCreate = inngest.createFunction(
+export const syncUserCreation = inngest.createFunction(
   {
     id: 'sync-user-from-clerk',
     event: 'clerk/user.created',
@@ -25,7 +25,7 @@ export const syncUserCreate = inngest.createFunction(
 )
 
 // Inngest Function to update user data to a database
-export const syncUserUpdate = inngest.createFunction(
+export const syncUserUpdation = inngest.createFunction(
   {
     id: 'update-user-from-clerk',
   },
@@ -44,7 +44,7 @@ export const syncUserUpdate = inngest.createFunction(
 );
 
 // Inngest Function to delete user data from a database
-export const syncUserDelete = inngest.createFunction(
+export const syncUserDeletion = inngest.createFunction(
   {
     id: 'delete-user-from-clerk',
   },
